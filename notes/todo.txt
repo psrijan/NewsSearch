@@ -1,0 +1,15 @@
+What are the things to do here .
+1. News API get data. [partially done]
+2. Create a spring based project. [done]
+2.1 Create a controller and proper media type 
+2.2 Create db connection to elasti search 
+2.3 
+3. Understand elastisearch.
+4. Save data in elastisearch.
+5. UI for displaying data. 
+6. cicd.
+7. Documenting the process on the go.  
+
+
+Elastisearch
+querying and as big data engine 

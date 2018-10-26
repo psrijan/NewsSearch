@@ -1,0 +1,83 @@
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+
+# dependencies
+/node_modules
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+
+# compiled output
+/src/ui/my-sassy-app/dist
+/src/ui/my-sassy-app/tmp
+/src/ui/my-sassy-app/out-tsc
+
+# dependencies
+/src/ui/my-sassy-app/node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+.sass-cache
+src/ui/my-sassy-app/connect.lock
+src/ui/my-sassy-app/coverage
+src/ui/my-sassy-app/libpeerconnection.log
+src/ui/my-sassy-app/npm-debug.log
+src/ui/my-sassy-app/yarn-error.log
+src/ui/my-sassy-app/testem.log
+src/ui/my-sassy-app/typings
+
+# System Files
+.DS_Store
+Thumbs.db

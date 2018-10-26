@@ -1,0 +1,25 @@
+having a schema. 
+require a new row 
+later have to alter the table of million of rows 
+time consuiming 
+nulls filled 
+best approach non structured data 
+
+non structured data:
+any structure for a specific piece of data
+1 row - 3 columns  
+2 row 4 columns 
+
+standard for non structured data - json 
+
+Non strcutred data is grouped into an overarching term = nosql 
+
+
+Select and insert data to db2 
+
+create table will also have a single row of data. 
+
+
+Jsontobson(jsondata here )
+bsontojson()
+
