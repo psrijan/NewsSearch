@@ -1,0 +1,14 @@
+page = page 1 page 2 
+pageSize = number of records maximum 20 
+
+
+https://newsapi.org/v2/everything?q=bitcoin&apiKey=dad48ba99c6547e795d918dac24b1fc5&page=1&pageSize=100
+
+You can loop through the pages one by one until you get an exception. 
+1. Handle Exception 
+2. Check Total Recrods
+3. persist data 
+4. increment page logic 
+5. max APi hits rnd 
+6. 
+

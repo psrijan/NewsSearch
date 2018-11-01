@@ -1,15 +1,34 @@
 What are the things to do here .
 1. News API get data. [partially done]
 2. Create a spring based project. [done]
-2.1 Create a controller and proper media type 
-2.2 Create db connection to elasti search 
-2.3 
-3. Understand elastisearch.
-4. Save data in elastisearch.
-5. UI for displaying data. 
-6. cicd.
+2.1 Create a controller and proper media type [partially done]
+2.2 Create db connection to mongodb [done ]
+2.3 Make a junt test for a particular function
+
+3. Understand mongodb.
+4. Save data in mongodb - done
+5. UI for displaying data. [unsure]
+- read and complete the angular component today
+- make a rest calling service in angular
+6. cicd. [done]
 7. Documenting the process on the go.  
 
 
+Problems:
+1. May need to make angular spring boot application in single host:port
+
+
+APPROACH:
+1. Finish All APIS Properly
+2. Make angular rest calling service.
+3. If you are feeling frustrated then read up
+
 Elastisearch
 querying and as big data engine 
+
+
+sudo service mongod stop
+
+//share data between componenet
+//
+

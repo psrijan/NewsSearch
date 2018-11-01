@@ -1,0 +1,22 @@
+sudo systemctl start elasticsearch
+HOME LOCATION = /usr/share/elasticsearch
+
+if you are soring values
+use pbjects as lookup table with it's title-content as key
+
+
+MONGODB:
+
+1. db.help() - common mongodb help functions
+2.
+
+While showing the data we need a single nested collection whereas for RDBMS multiple joins must be done.
+
+
+CREATING/USING DATABSE: use database_name
+CHECKDB:
+db
+show dbs - usage details about database. [mind ths
+
+
+pass event and then get values from even

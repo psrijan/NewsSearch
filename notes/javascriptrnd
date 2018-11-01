@@ -1,0 +1,25 @@
+Deleting Object key pairs
+
+delete object[key]
+
+
+Inserting Object values
+let ramu ={
+    'name': 'kaka',
+    'age' : 12
+}
+
+ramu.address = "Koteshowr" ;
+//this will add new property to the object
+
+CHECK IF CONTAINS PROPERTY:
+object.hasOwnProperty("surat");
+
+ACCESSING CHAINED VALUES IN OBJECT
+myObject.name.firstname;
+myObject.dog["tail"];
+
+first one uses dot notation, where as second uses dot bracket notation. The second one can be used when a key has a space.
+
+ACCESSING ARRAYS
+You can use similar notation to access nested array
