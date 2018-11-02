@@ -1,6 +1,5 @@
 
 <div>
-  
   <div class="container jumbotron">
     <h1> News Search</h1>
     <p> Random News Search App</p>
@@ -22,7 +21,6 @@
           class="col- col-lg-4">
           <h5 class="card-title"><a href="{{newsEntry.value.url}}">{{i+1}} : {{newsEntry.value.title}}</a></h5>
           <p class="card-text">{{newsEntry.value.description}}</p>
-          <!-- <button type="button" class="btn btn-info" data-toggle="#myModal" data-target="'#'newsEntry.value.newsId" id ={{newsEntry.key}}>Repeats <span class="badge badge-secondary">{{newsEntry.value.getCount()}}</span></button>      -->
           <button type="button" class="btn btn-info" data-toggle="modal" [attr.data-target]="'#datamodel-'+i" (click)="repeatClicked($event)">Total <span class="badge badge-secondary">{{newsEntry.value.getCount()}}</span></button>
           <div [attr.id]="'datamodel-'+i" class="modal fade" role="dialog">
             <div class="modal-dialog">

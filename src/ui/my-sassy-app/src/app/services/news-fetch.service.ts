@@ -17,17 +17,27 @@ export class NewsFetchService {
 
   constructor(private http: HttpClient) { }
 
+  /**
+   * HTTP Request to get all news 
+   */
   getAllNews()  {
     console.log("Fetching news from server");
-    // return this.http.get(this.getAuthorSearchUrl("Taylor Hatmaker"));
     return this.http.get(this.getNewsUrl());
     
   }
 
+  /**
+   * Creates a url from base url and endpoint 
+   * for all news.
+   */
   private getNewsUrl() {
     return this.BASE_URL + this.ALL_NEWS; 
   }
 
+  /**
+   * Toggles the server to start or stop External
+   * News Fetch Service
+   */
   toggleServer (toggle  : string) : Observable<HttpResponse<Message>>{
 
     console.log("calling toggle api");
@@ -35,6 +45,13 @@ export class NewsFetchService {
  
   }
 
+  /**
+   * unused
+   * but will search the db for 
+   * author based on the string 
+   * provided 
+   * @param author 
+   */
   searchNewsOnAuthor(author : string){
     this.http.get(this.getAuthorSearchUrl(author))
     .subscribe(resp =>{
@@ -46,15 +63,28 @@ export class NewsFetchService {
     });
   }
 
+  /**
+   * Makes the url based on base url and endpoint 
+   * for fetching news based on author 
+   * @param author 
+   */
   private getAuthorSearchUrl(author : string) : string {
     return this.BASE_URL + this.AUTHOR_SEARCH +  "/" + this.convertSpace(author);
   }
 
 
+  /**
+   * converts the space in the url with %20
+   * standard format it url. 
+   * @param author 
+   */
   private convertSpace (author : string) : string{
     return author.replace(" ", "%20");
   }
 
+  /**
+   * Get the url for Service Toggle 
+   */
   private getToggleUrl(toggle : string ) : string {
     return this.BASE_URL + this.TOGGLE+"/"+toggle;
   }

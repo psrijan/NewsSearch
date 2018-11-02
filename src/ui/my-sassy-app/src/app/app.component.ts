@@ -18,9 +18,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() : void {
-    console.log(" MEMEME" +this.newsFetchService.getAllNews());
-    this.newsFetchService.toggleServer("start");
-    this.newsFetchService.searchNewsOnAuthor("Taylor Hatmaker");
   }
   
 }

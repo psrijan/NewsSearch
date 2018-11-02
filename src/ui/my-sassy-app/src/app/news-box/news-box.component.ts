@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Message , MessageError , MessageOk} from '../model/Message';
 import {News} from '../model/News';
-import {NewsItemComponent} from '../news-item/news-item.component';
 import {NewsFetchService} from '../services/news-fetch.service';
 
 declare var $ :any; 
@@ -13,24 +12,21 @@ declare var $ :any;
 })
 
 export class NewsBoxComponent implements OnInit {
-
-  author : string =""; 
-  newsCount: number =0;
+ 
   message : Message = MessageOk; 
   news : News[];   
   disable : string = "stop";
   enable : string = "start";
   current : string = this.enable;
+  //This is the object that is used to filter the repeated news 
+  //the object is a key value pair. The key of each news is received from
+  //News.ts class getUniqueHas(). If the key matches then it's a repeated 
+  //news item and is added as a child in News.ts childs array variable. 
   newsMapper : object = {}; 
 
   constructor(private fetchService : NewsFetchService) { }
 
   ngOnInit() {
-     
-  }
- 
-  submitClicked() {
-    alert("Submit Button Clicked");
      
   }
 
@@ -71,9 +67,10 @@ export class NewsBoxComponent implements OnInit {
       let val = resp[0];
       let newsList : News[] = []; 
 
-      //move to background thread 
-      //ui will slow down 
-      while(val != undefined && i <3000) {
+      //@TODO Move to background thread in future as 
+      //UI will slow down signigicantly if the data is too large
+      //Future Scope
+      while(val != undefined && i<10000) {
         let entry : News = this.createNewsObjectFromJson(val); 
         let newsFromMap = this.newsMapper[entry.getUniqueHash()]; 
         console.log("###" + (entry instanceof News));
@@ -112,8 +109,6 @@ export class NewsBoxComponent implements OnInit {
     // let idValue = idAttr.nodeValue; 
     console.log(attr);
     console.log("data-target: " + attr["data-target"]);
-    
-
   }
   /**
    * Utility function that converts the json data of 
@@ -135,21 +130,3 @@ export class NewsBoxComponent implements OnInit {
   }
 
 }
-/*
-
-author: "Taylor Hatmaker"
-​​
-content: "Coinbase’s newest asset is live. On Tuesday the popular U.S.-based cryptocurrency platform added support for ZRX, the token representing the 0x Project. On Coinbase, ZRX joins the rarified ranks of Bitcoin, Bitcoin Cash, Ethereum, Ethereum Classic and Litecoi… [+1000 chars]"
-​​
-description: "Coinbase’s newest asset is live. On Tuesday the popular U.S.-based cryptocurrency platform added support for ZRX, the token representing the 0x Project. On Coinbase, ZRX joins the rarified ranks of Bitcoin, Bitcoin Cash, Ethereum, Ethereum Classic and Litecoi…"
-​​
-newsId: "5bd605930a1d1f4856dccd7b"
-​​
-publishedAt: "2018-10-16T19:48:06Z"
-​​
-title: "Coinbase now lets you buy and sell ZRX"
-​​
-url: "http://techcrunch.com/2018/10/16/zrx-coinbase/"
-​​
-utlToImage: null
-*/

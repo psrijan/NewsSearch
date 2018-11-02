@@ -5,13 +5,11 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { NewsBoxComponent } from './news-box/news-box.component';
 import { HttpClientModule } from '@angular/common/http';
-import { NewsItemComponent } from './news-item/news-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NewsBoxComponent,
-    NewsItemComponent
+    NewsBoxComponent
   ],
   imports: [
     BrowserModule,

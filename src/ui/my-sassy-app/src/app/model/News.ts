@@ -13,11 +13,16 @@ export class News {
     ) {
     }   
 
-
+    /**This is the value that is used to identify a particular 
+     * news in the object newsMapper in news-box-component.ts
+     */
     public getUniqueHash() : string {
         return this.author+this.title + this.description;
-    }
+    } 
 
+    /**
+     * Counts the number of repeated news item. 
+     */
     public getCount() : number {
         if(this.childs == undefined ) {
             console.log("NOT CHILD" + " REPEAT COUNT : 1" )
@@ -27,10 +32,6 @@ export class News {
         return this.childs.length + 1; 
     }
 
-    public toHtmlString() : string {
-        let str =  this.title + "\n"+ this.description +"\n\n"; 
-        return str;
-    }
 
 }
 
