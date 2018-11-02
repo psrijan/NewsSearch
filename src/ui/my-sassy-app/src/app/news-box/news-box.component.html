@@ -1,0 +1,52 @@
+
+<div>
+  
+  <div class="container jumbotron">
+    <h1> News Search</h1>
+    <p> Random News Search App</p>
+  </div>
+
+  <div class="container button-box">
+    <button class="btn btn-primary pad-sides" (click)="fetchNewsClicked()">Fetch News</button>
+    <button class="btn btn-danger pad-sides" (click)="toggleClicked()">Toggle</button>
+  </div>
+
+  <div class="container alert" [className] = "message.status == 'Started' ? ' container alert alert-success' : ' container alert alert-warning'" >
+    <h3> Last Message: </h3>
+      <strong>Status: {{message.status}} </strong> &nbsp; {{message.message}}
+  </div>
+
+  <div class="container">  
+      <div class="row news-box">
+        <div *ngFor="let newsEntry of newsMapper | keyvalue; let i=index" 
+          class="col- col-lg-4">
+          <h5 class="card-title"><a href="{{newsEntry.value.url}}">{{i+1}} : {{newsEntry.value.title}}</a></h5>
+          <p class="card-text">{{newsEntry.value.description}}</p>
+          <!-- <button type="button" class="btn btn-info" data-toggle="#myModal" data-target="'#'newsEntry.value.newsId" id ={{newsEntry.key}}>Repeats <span class="badge badge-secondary">{{newsEntry.value.getCount()}}</span></button>      -->
+          <button type="button" class="btn btn-info" data-toggle="modal" [attr.data-target]="'#datamodel-'+i" (click)="repeatClicked($event)">Total <span class="badge badge-secondary">{{newsEntry.value.getCount()}}</span></button>
+          <div [attr.id]="'datamodel-'+i" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">Repeated Items</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <!--Display Children-->
+                  <div *ngFor="let indivChild of newsEntry.value.childs">
+                    <h3>{{indivChild.title}}</h3>
+                    <p>{{indivChild.description}}</p>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+</div>
