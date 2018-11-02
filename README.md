@@ -28,14 +28,14 @@ As I had the option to sort through redundant data either in database or in UI, 
 
 This entire process is called CICD.
 
-##How to Setup Project: 
+## How to Setup Project: 
 1. Import all java dependencies through maven. 
 1. Go to src/ui/my-sassy-app and install all Javascript/typescript dependency using node package manager. `npm install`
 1. Need to have mongodb database installed. Start mongodb service using. `sudo service mongod start`
 
-####Final Result: 
+#### Final Result: 
 
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=cqwa3O-IMss&feature=youtu.be)
 
 ## Part 2: Continuous Integration | Deployment Steps:
 
