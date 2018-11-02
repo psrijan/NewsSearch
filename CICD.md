@@ -1,3 +1,17 @@
+## News Search
+
+#### Overview
+Application Features. 
+1. **Enable Service:** I have a service written in backend that a user can enable and disable using a REST endpoint. This service calls an external news API and saves the data to mongodb document store. 
+1. **Fetch News From Database:** Another API provides functionality to fetch news from the mongodb database and display it in the UI. 
+1. **UI:** UI part is made in angular, and has functions to toggle the service (start stop service). The second part displays the documents stored in mongodb in the UI. The UI filters the repeated news Item through an object map called newsMapper available in NewsBoxComponent.   
+
+
+####Points
+1. Thought process:
+1. Limitations 
+1. 
+
 ## Need?
 CICD means continuous integration and deployment. It’s a pipleline for a code to be delivered to the client, quickly and safely.
 

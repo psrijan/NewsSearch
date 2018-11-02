@@ -1,21 +1,22 @@
-What are the things to do here .
-1. News API get data. [partially done]
-2. Create a spring based project. [done]
-2.1 Create a controller and proper media type [partially done]
-2.2 Create db connection to mongodb [done ]
-2.3 Make a junt test for a particular function
 
-3. Understand mongodb.
-4. Save data in mongodb - done
-5. UI for displaying data. [unsure]
+
+
+## What are the things to do here .
+1. News API get data. [partially done]
+1. . Create a spring based project. [done]
+1. Create a controller and proper media type [partially done]
+1.  Create db connection to mongodb [done ]
+1. Make a junt test for a particular function
+
+1. Understand mongodb.
+1. Save data in mongodb - done
+1. UI for displaying data. [unsure]
 - read and complete the angular component today
 - make a rest calling service in angular
-6. cicd. [done]
-7. Documenting the process on the go.  
+1. cicd. [done]
+1. Documenting the process on the go.
 
 
-Problems:
-1. May need to make angular spring boot application in single host:port
 
 
 APPROACH:
