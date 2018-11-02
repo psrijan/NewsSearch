@@ -35,7 +35,7 @@ This entire process is called CICD.
 
 #### Final Result: 
 
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=cqwa3O-IMss&feature=youtu.be)
+[![Link To Youtube Demo Video](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=cqwa3O-IMss&feature=youtu.be)
 
 ## Part 2: Continuous Integration | Deployment Steps:
 
