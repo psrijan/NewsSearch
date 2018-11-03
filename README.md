@@ -12,7 +12,7 @@ Application Features.
 #### Thought process: 
 For this project, it was important to decide and build a backend before the client side. The reason for this is deciding on database storage, APIs and services make it clearer to implement the client side logic.
  
- While initially I had decided to use elastic search, it's TransactionClient in spring wasn't consistent with the version of elasticsearch I installed.
+ While initially I had decided to use elastic search, it's TransactionClient in spring wasn't consistent with the version of elasticsearch I installed. Now I'm using mongodb to store the information. 
 
 I have used the inbuilt Spring Repository to query documents from mongodb and sorting is done in the UI itself through a class.
 
@@ -45,5 +45,12 @@ This entire process is called CICD.
 1. **Code Scans:** In this process, a centralized code scan and tests are run. Through afformentioned tests, the code is tested. If the code fails here, then the tester is notified using a issue tracking software such as JIRA>
 1. **Generate Builds and Test Reports**: After code scans are completed and the code passess code standard, builds are created. This is done by systems such as jenkins. These are jar files (differential or complete jars) that need to be shipped to the client site. Jars can also be created based on the type of main branch in the repo (development builds, master builds, production builds).The results of test cases and builds are also generated in this process and stored centrally. This notifies the developer of warnings, errors in the code, which can be improved upon. 
 1. **Automate Deployment:** Once the build is created, there are few scenarios. 1. Client server deployment of jar. 2. Cloud Deployment (like Heroku etc). In case,of this scenario, we can make the jars available to the client for deployment either manually or automatically. For the second scenario, we can setup a deployment pipeline to automatically ship the jars to the cloud. 
+
+## NoSQL Database Brief Intro:
+1. Store data as Documents (json structure)
+1. Ease for horizontal scaling
+1. No specific schema to adhere to, avoid nulls
+1. Highly available system
+1. Not a replacement for RDBMS - solves different use cases (big data, flexible schema, availablity issue etc)
 
 
