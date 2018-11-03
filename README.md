@@ -25,9 +25,6 @@ As I had the option to sort through redundant data either in database or in UI, 
 1. Instead of printing the error in console, it's a good practice to log all the errors through a logging framework such as Log4j. This can be done by configuring the log4j in application.properties and using the Log4j class to log data into a file.
 
 
-
-This entire process is called CICD.
-
 ## How to Setup Project: 
 1. Import all java dependencies through maven. 
 1. Go to src/ui/my-sassy-app and install all Javascript/typescript dependency using node package manager. `npm install`
